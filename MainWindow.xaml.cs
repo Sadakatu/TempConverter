@@ -27,6 +27,11 @@ namespace BasicWPF
 
         private void Button_Convert_Click(object sender, RoutedEventArgs e)
         {
+            if (Input_Value.Text == "")
+            {
+                Input_Value.Text = "0";
+            }
+
             double Val = Convert.ToDouble(Input_Value.Text);
 
             if (Select_Unit.SelectedIndex == 0)
